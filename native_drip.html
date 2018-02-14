@@ -1,0 +1,152 @@
+<html>
+<head>
+<title>Test</title>
+<style>
+
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4CAF50;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+</style>
+</head>
+<body>
+  <form action="https://www.getdrip.com/forms/340726239/submissions" method="post" data-drip-embedded-form="340726239">
+    <h3 data-drip-attribute="headline">SFM Prospects 2018 - test 1</h3>
+    <div data-drip-attribute="description"></div>
+      <div>
+          <label for="drip-Full-Name">name</label><br />
+          <input type="text" id="drip-Full-Name" name="fields[Full_Name]" value="" />
+      </div>
+      <div>
+          <label for="drip-email">Email Address</label><br />
+          <input type="email" id="drip-email" name="fields[email]" value="" />
+      </div>
+      <div>
+          <label for="drip-gclid">gclid</label><br />
+          <input type="text" id="drip-gclid" name="fields[gclid]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-source">source</label><br />
+          <input type="text" id="drip-ttm-source" name="fields[ttm_source]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-campaignid">campaignid</label><br />
+          <input type="text" id="drip-ttm-campaignid" name="fields[ttm_campaignid]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-ad">adgp</label><br />
+          <input type="text" id="drip-ttm-ad" name="fields[ttm_ad]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-targetid">targetid</label><br />
+          <input type="text" id="drip-ttm-targetid" name="fields[ttm_targetid]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-matchtype">matchtype</label><br />
+          <input type="text" id="drip-ttm-matchtype" name="fields[ttm_matchtype]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-keyword">keyword</label><br />
+          <input type="text" id="drip-ttm-keyword" name="fields[ttm_keyword]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-loc-physical-ms">location</label><br />
+          <input type="text" id="drip-ttm-loc-physical-ms" name="fields[ttm_loc_physical_ms]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-device">device</label><br />
+          <input type="text" id="drip-ttm-device" name="fields[ttm_device]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-pla">placement</label><br />
+          <input type="text" id="drip-ttm-pla" name="fields[ttm_pla]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-target">target</label><br />
+          <input type="text" id="drip-ttm-target" name="fields[ttm_target]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-tcat">tcat</label><br />
+          <input type="text" id="drip-ttm-tcat" name="fields[ttm_tcat]" value="" />
+      </div>
+      <div>
+          <label for="drip-ttm-tsum">tsum</label><br />
+          <input type="text" id="drip-ttm-tsum" name="fields[ttm_tsum]" value="" />
+      </div>
+    <div>
+      <input type="submit" value="Sign Up" data-drip-attribute="sign-up-button" />
+    </div>
+  </form>
+  <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">\x3C/script>')</script>
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+      <script>
+
+  jQuery(document).ready(function () {
+    console.log("Jquery loaded");
+    jQuery("form[data-drip-embedded-form='340726239']").submit(function(e)
+    {
+       e.preventDefault();
+          var time_zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+              console.log("Ran time zone");
+          jQuery("form[data-drip-embedded-form='340726239'] :input").each(function(){
+              var nameAttributeString = jQuery(this).attr("name");
+                  console.log("Name Attribute: "+nameAttributeString);
+              if(nameAttributeString!=null && nameAttributeString!="fields[email]")
+              {
+                  console.log("Url Param: "+nameAttributeString);
+                var urlParam = nameAttributeString.replace("fields[","").replace("]","");
+                jQuery(this).val(getUrlParameter(urlParam));
+              }
+          });
+          jQuery(this).unbind('submit').submit();
+    });
+
+      });
+
+      var getUrlParameter = function getUrlParameter(sParam) {
+          var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+              sURLVariables = sPageURL.split('&'),
+              sParameterName,
+              i;
+
+          for (i = 0; i < sURLVariables.length; i++) {
+              sParameterName = sURLVariables[i].split('=');
+
+              if (sParameterName[0] === sParam) {
+                  return sParameterName[1] === undefined ? true : sParameterName[1];
+              }
+          }
+          return "not_set";
+      };
+
+      </script>
+
+      <!-- Drip -->
+<script type="text/javascript">
+  var _dcq = _dcq || [];
+  var _dcs = _dcs || {};
+  _dcs.account = '7803525';
+
+  (function() {
+    var dc = document.createElement('script');
+    dc.type = 'text/javascript'; dc.async = true;
+    dc.src = '//tag.getdrip.com/7803525.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(dc, s);
+  })();
+</script>
+<!-- end Drip -->
+</body>
+</html>
