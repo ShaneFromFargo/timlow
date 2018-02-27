@@ -27,7 +27,7 @@ body {
     <div data-drip-attribute="description"></div>
       <div>
           <label for="drip-Full-Name">name</label><br />
-          <input type="text" id="drip-Full-Name" name="fields[Full_Name]" value="" />
+          <input type="text" id="drip-Full-Name" name="fields[first_name]" value="" />
       </div>
       <div>
           <label for="drip-email">Email Address</label><br />
@@ -110,7 +110,7 @@ jQuery(document).ready(function () {
         var nameAttributeString = jQuery(this).attr("name");
         /*We ignore the name and email fields*/
         /*If you wish to ignore more fields, simply add {&& nameAttributeString!="fields[otheFieldHere]"}*/
-        if(nameAttributeString!=null && nameAttributeString!="fields[email]" && nameAttributeString.toLowerCase() != "fields[full_name]" && nameAttributeString.toLowerCase()!= "fields[name]")
+        if(nameAttributeString!=null && nameAttributeString!="fields[email]" && nameAttributeString.toLowerCase() != "fields[full_name]" && nameAttributeString.toLowerCase()!= "fields[name]" && nameAttributeString.toLowerCase()!= "fields[first_name]")
         {
           var urlParam = nameAttributeString.replace("fields[","").replace("]","");
           var fieldValue = getUrlParameter(urlParam);
